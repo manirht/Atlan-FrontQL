@@ -1,0 +1,54 @@
+.tableContainer {
+  margin-top: 2rem;
+  overflow-x: auto;
+  background: white; /* Add white background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th {
+  background: #2c3e50; /* Dark header */
+  color: white; /* White text */
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ecf0f1; /* Light border */
+  color: #2c3e50; /* Dark text */
+}
+
+.table tr:hover {
+  background-color: #f8f9fa; /* Light hover */
+}
+
+/* Add if you want alternating row colors */
+.table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+.exportContainer {
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.exportButton {
+  background: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.exportButton:hover {
+  background-color: #45a049;
+}
