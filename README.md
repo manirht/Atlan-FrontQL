@@ -2,7 +2,8 @@
 
 _A web-based SQL editor with mock execution capabilities, designed for data exploration and learning_
 
-[![Live Demo]([https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=vercel](https://atlan-frontend-sql.netlify.app/))]
+[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge&logo=vercel)](https://atlan-frontend-sql.netlify.app/)  
+
 
 
 ![App Screenshot](./screenshots/demo-light.png)  
@@ -55,6 +56,7 @@ src/
 └── App.jsx          # Root component
 ```
 ###🔑 Key Implementation Details
+```bash
 // Context maintains:
 {
   currentQuery: "SELECT * FROM customers",
@@ -62,3 +64,4 @@ src/
   savedQueries: [/*...*/],
   history: [/*...*/]
 }
+```
