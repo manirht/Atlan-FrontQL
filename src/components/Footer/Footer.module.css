@@ -1,7 +1,29 @@
 .footer {
+    background: var(--background);
     border-top: 1px solid var(--border);
-    padding: 2rem 0;
-    text-align: center;
-    color: var(--muted-foreground);
+    padding: 1.5rem 0;
     margin-top: auto;
+  }
+  
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--muted-foreground);
+  }
+  
+  .heart {
+    color: #dc2626; /* Red heart color */
+    font-size: 1.1rem;
+  }
+  
+  .atlanLogo {
+    color: #2563eb; /* Atlan blue */
+    font-weight: 700;
+    font-size: 1rem;
   }

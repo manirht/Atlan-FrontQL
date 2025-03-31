@@ -8,6 +8,7 @@ import SQLEditor from './components/SQLEditor/SQLEditor';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import History from './components/History/History';
 import './index.css';
@@ -115,12 +116,16 @@ export default function App() {
     <ThemeProvider>
     <MainProvider>
     <Router>
+      <div className={styles.appContainer}>
         <Navbar />
         <Routes>
+
           <Route path="/" element={<Home />} />
           <Route path="/query" element={<AppContent />} />
           <Route path="/history" element={<History/>} />
         </Routes>
+        <Footer />
+      </div>
       </Router>
     </MainProvider>
     </ThemeProvider>
