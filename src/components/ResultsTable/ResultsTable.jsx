@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { CSVLink } from 'react-csv';
 import { useMainContext } from '../../context/MainContext';
 import Loader from '../Loader/Loader';

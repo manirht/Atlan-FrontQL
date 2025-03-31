@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { MainProvider, useMainContext } from './context/MainContext';
 import { predefinedQueries } from './constants/queries';
 import QuerySelector from './components/QuerySelector/QuerySelector';
@@ -8,7 +7,7 @@ import styles from './App.module.css';
 import SQLEditor from './components/SQLEditor/SQLEditor';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/NavBar/NavBar';
 import Home from './components/Home/Home';
 import History from './components/History/History';
 import './index.css';
