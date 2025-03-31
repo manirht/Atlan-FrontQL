@@ -1,0 +1,115 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .searchContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .searchInput {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchInput input {
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    width: 300px;
+  }
+  
+  .searchInput svg {
+    position: absolute;
+    left: 0.5rem;
+    color: var(--muted-foreground);
+  }
+  
+  .tableContainer {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--background);
+  }
+  
+  .table th {
+    background: var(--accent);
+    padding: 1rem;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .queryCell {
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .timeCell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .clearButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--danger);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .runButton, .deleteButton {
+    padding: 0.25rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--muted-foreground);
+  }
+  
+  .runButton:hover {
+    color: var(--primary);
+  }
+  
+  .deleteButton:hover {
+    color: var(--danger);
+  }
+  
+  .emptyMessage {
+    text-align: center;
+    padding: 2rem;
+    color: var(--muted-foreground);
+  }

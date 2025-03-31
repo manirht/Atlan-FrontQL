@@ -10,9 +10,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
+import History from './components/History/History';
 import './index.css';
+import buttonStyles from './Buttons.module.css';
+import { Play, Save, Trash2 } from 'lucide-react';
 function AppContent() {
-  const { queryHistory, setQueryHistory } = useMainContext();
+  const { queryHistory, setQueryHistory , addQuery } = useMainContext();
 
   const handleRunQuery = () => {
     const matchedQuery = predefinedQueries.find(
@@ -24,6 +27,10 @@ function AppContent() {
       outputData: matchedQuery?.data || [],
       columns: matchedQuery?.columns || []
     }));
+    addQuery({
+      text: queryHistory.currentQuery,
+      name: `Query ${queryHistory.saved.length + 1}`
+    });
   };
 
   const handleQuerySelect = (query) => {
@@ -48,6 +55,10 @@ function AppContent() {
         name: `Saved Query ${prev.saved.length + 1}`
       }]
     }));
+    addQuery({
+      text: queryHistory.currentQuery,
+      name: prompt('Name this query:', `Saved Query ${queryHistory.saved.length + 1}`)
+    });
   };
 
   const handleClear = () => {
@@ -68,15 +79,31 @@ function AppContent() {
 
       <div className={styles.editorSection}>
         <SQLEditor />
-        <div className={styles.buttonGroup}>
-          <RunButton className="primary-button" onClick={handleRunQuery} />
-          <button className="secondary-button" onClick={handleSaveQuery}>
-            Save Query
-          </button>
-          <button className="alert-button" onClick={handleClear}>
-            Clear
-          </button>
-        </div>
+        <div className={buttonStyles.buttonGroup}>
+        <button 
+  className={`${buttonStyles.button} ${buttonStyles.primaryButton}`}
+  onClick={handleRunQuery}
+>
+  <Play size={16} />
+  Run Query
+</button>
+
+<button 
+  className={`${buttonStyles.button} ${buttonStyles.secondaryButton}`}
+  onClick={handleSaveQuery}
+>
+  <Save size={16} />
+  Save Query
+</button>
+
+<button 
+  className={`${buttonStyles.button} ${buttonStyles.alertButton}`}
+  onClick={handleClear}
+>
+  <Trash2 size={16} />
+  Clear
+</button>
+</div>
       </div>
 
       <ResultsTable />
@@ -93,7 +120,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/query" element={<AppContent />} />
-          <Route path="/history" element={<div>History Page</div>} />
+          <Route path="/history" element={<History/>} />
         </Routes>
       </Router>
     </MainProvider>

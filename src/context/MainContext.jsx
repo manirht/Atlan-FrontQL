@@ -19,9 +19,31 @@ export function MainProvider({ children }) {
     columns: [],
     currentQuery: ''
   });
+  const addQuery = (query) => {
+    setQueryHistory(prev => ({
+      ...prev,
+      saved: [...prev.saved, {
+        id: Date.now(),
+        text: query.text,
+        name: query.name || `Query ${prev.saved.length + 1}`,
+        timestamp: new Date().getTime()
+      }]
+    }));
+  };
+  const removeQuery = (id) => {
+    setQueryHistory(prev => ({
+      ...prev,
+      saved: prev.saved.filter(query => query.id !== id)
+    }));
+  };
+
+  const clearHistory = () => {
+    setQueryHistory(prev => ({ ...prev, saved: [] }));
+  };
+
 
   return (
-    <MainContext.Provider value={{ queryHistory, setQueryHistory }}>
+    <MainContext.Provider value={{ queryHistory, setQueryHistory , addQuery, removeQuery, clearHistory }}>
       {children}
     </MainContext.Provider>
   );
