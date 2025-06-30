@@ -7,7 +7,7 @@ _A sleek, web-based SQL editor with powerful mock execution capabilities, meticu
 ## 🔗 Quick Access
 
 [![Live Demo](https://img.shields.io/badge/Launch%20App-Live%20Demo-5D6D7E?style=for-the-badge&logo=vercel&logoColor=white)](https://atlan-frontend-sql.netlify.app/)
-[![GitHub Repository](https://img.shields.io/badge/Source%20Code-GitHub%20Repo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME/sql-query-runner.git)
+[![GitHub Repository](https://img.shields.io/badge/Source%20Code-GitHub%20Repo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/manirht/Atlan-FrontQL)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 ---
@@ -52,8 +52,7 @@ Built with a modern and robust set of technologies for optimal performance and m
 * **Styling:** CSS Modules (for scoped and modular styling)
 * **Icons:** Lucide React (for beautiful, customizable icons)
 * **Build Tool:** npm + Vite
-* **Hosting:** Vercel / Netlify [![Vercel](https://img.shields.io/badge/-Vercel-000000?logo=vercel&logoColor=white&style=flat)](https://vercel.com/) [![Netlify](https://img.shields.io/badge/-Netlify-00C7B7?logo=netlify&logoColor=white&style=flat)](https://www.netlify.com/)
-
+* **Hosting:** Vercel [![Vercel](https://img.shields.io/badge/-Vercel-000000?logo=vercel&logoColor=white&style=flat)](https://vercel.com/)
 ---
 
 ## 🚀 Getting Started
