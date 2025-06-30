@@ -70,10 +70,10 @@ Ensure you have the following installed on your system:
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/YOUR_USERNAME/sql-query-runner.git](https://github.com/YOUR_USERNAME/sql-query-runner.git)
+git clone [https://github.com/manirht/Atlan-FrontQL.git](https://github.com/manirht/Atlan-FrontQL.git)
 
 # 2. Navigate into the project directory
-cd sql-query-runner
+cd Atlan-FrontQL
 
 # 3. Install project dependencies
 npm install
